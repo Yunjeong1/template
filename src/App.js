@@ -1,35 +1,18 @@
 import './scss/style.scss';
+import Card from './Card';
 
 function App() {
-	const colors = ['aqua', 'orange', 'lightgreen', 'hotpink'];
-
+	const colors = ['aqua', 'orange', 'hotpink'];
+	/*
+부모 컴포넌트에서 자식 컴포넌트로 특정 데이터를 전달하기 위해서는 자식 컴포넌트에 prop에 값을 담아서 전달
+*/
 	return (
 		<>
-			{/* map으로 특정 배열값을 반복돌면서 JSX 가상돔 생성가능 */}
 			{colors.map((color, idx) => {
-				const style = { backgroundColor: color };
-				return (
-					//가상돔을 반복돌며 출력할때는 무조건 key값에 고유값 적용
-					<article key={idx} style={style}>
-						{color}
-					</article>
-				);
+				return <Card key={idx} color={color} />;
 			})}
 		</>
 	);
 }
-/*
-function App() {
-	const colors = ['aqua', 'orange', 'lightgreen', 'hotpink'];
-	return (
-		<>
-			<article style={{ backgroundColor: colors[0] }}>aqua</article>
-			<article style={{ backgroundColor: colors[1] }}>orange</article>
-			<article style={{ backgroundColor: colors[2] }}>lightgreen</article>
-			<article style={{ backgroundColor: colors[3] }}>hotpink</article>
-		</>
-	);
-}
-*/
 
 export default App;
