@@ -1,11 +1,15 @@
 @import 'reset';
+* {
+	margin: 10px;
+}
+button {
+	margin-right: 10px;
+}
 
-.colorBox {
-	margin: 50px;
-
-	.box {
-		width: 100px;
-		height: 100px;
-		background: gray;
-	}
+.box {
+	width: 200px;
+	height: 200px;
+	background: aqua;
+	margin-top: 50px;
+	transition: 0.5s;
 }
