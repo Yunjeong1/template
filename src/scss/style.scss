@@ -1,8 +1,12 @@
 @import 'reset';
 
 article {
-	width: 100px;
-	height: 100px;
-	background: gray;
-	margin: 50px;
+	width: 300px;
+	border: 1px solid #999;
+	padding: 20px;
+	margin: 30px;
+
+	> img {
+		width: 100%;
+	}
 }
