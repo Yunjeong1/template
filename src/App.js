@@ -3,6 +3,8 @@ import { useState } from 'react';
 
 function App() {
 	let [num, setNum] = useState(0);
+
+	//변경할 배경색을 관리할 state추가 (초기값은 gray)
 	let [bg, setBg] = useState('gray');
 
 	return (
@@ -30,6 +32,8 @@ function App() {
 			<article className='colorBox'>
 				<div className='box' style={{ backgroundColor: bg }}></div>
 
+				{/* 이벤트 연결 */}
+				{/* <button onClick={e => {setBg('red');}}>red</button> */}
 				<button
 					onClick={(e) => {
 						setBg(e.target.innerText);
