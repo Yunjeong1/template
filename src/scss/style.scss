@@ -1,5 +1,11 @@
 @import 'reset';
 
-button {
-	margin-right: 15px;
+.colorBox {
+	margin: 50px;
+
+	.box {
+		width: 100px;
+		height: 100px;
+		background: gray;
+	}
 }
